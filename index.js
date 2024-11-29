@@ -112,20 +112,25 @@ app.patch("/task/:id/edit", (req,res)=>{
         connection.query(q,[title,description,assignee,date,priority,id],(err,result)=>{
             if(err) throw err;
             else{
-                let q1 = `SELECT * FROM tasks WHERE id= ?`;
-                try{
-                    connection.query(q1, [id],(err,result)=>{
-                        if(err) throw err;
-                        else{
-                            res.render("details.ejs", {task: result[0]});
-                        }
-                    });
-                }catch(err){
-
-                }
+               res.redirect('/task/:id/details');
             }
         });
     }catch(err){
         res.send(err);
+    }
+});
+
+app.delete("/task/:id/delete", (req,res)=>{
+    let {id} = req.params;
+    let q = `DELETE FROM tasks where id =?`;
+    try{
+        connection.query(q,[id],(err,result)=>{
+            if(err) throw err;
+            else{
+                res.redirect("/task/list");
+            }
+        });
+    }catch(err){
+
     }
 });

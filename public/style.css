@@ -124,3 +124,10 @@ ul li{
     font-weight: bold;
     font-size: 1.1rem;
 }
+
+.delete-btn{
+    border: none;
+    color: red;
+    background-color: white;
+    font-weight: normal;
+}

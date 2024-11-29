@@ -21,6 +21,9 @@
                     </div>
                     <div class="view-details">
                         <a href="http://localhost:8080/task/<%=task.id%>/details">View Details</a>
+                        <form method="post" action="/task/<%=task.id%>/delete?_method=DELETE">
+                            <button class="delete-btn">Delete Task</button>
+                        </form>
                     </div>
                 </div>
             <% } %>
