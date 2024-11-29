@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Task List</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container" style="min-width: 90vw;">
+            <h2>Task List</h2>
+            <% for(task of tasks) { %>
+                <div class="task-list"> 
+                    <div class="list">
+                        <ul>
+                            <h3 style="color: rgb(10, 204, 10); font-size: 1.4rem;"><%= task.title %></h3>
+                            <li><b>Assignee : </b><%= task.assignee %></li>
+                            <li><b>Due Date : </b><%= task.date.toDateString() %></li>
+                        </ul>
+                    </div>
+                    <div class="view-details">
+                        <a href="http://localhost:8080/task/<%=task.id%>/details">View Details</a>
+                    </div>
+                </div>
+            <% } %>
+            
+        </div>
+    </div>
+    <div class="footer-nav">
+        <a href="http://localhost:8080/task">Back to Home</a>
+    </div>
+</body>
+</html>
+
+
+

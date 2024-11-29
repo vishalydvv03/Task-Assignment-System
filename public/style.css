@@ -1,0 +1,126 @@
+*{
+    margin : 0;
+    padding : 0;
+}
+
+body{
+    background-color: rgb(232, 229, 229);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container{
+    display:flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.container{
+        background-color: white;
+        min-height : 30vh;
+        box-shadow: 1px 1px 8px 3px rgb(186, 184, 184);
+        box-sizing: border-box;
+        border-radius: 5px;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.msg-body{
+    align-self: flex-start;
+    margin-left : 1rem;
+    font-size : 0.97rem;
+
+}
+
+.nav-links>a{
+    text-decoration: none;
+    margin-right : 1rem;
+    color: green;
+    font-weight: bold;
+}
+
+/** Add Task Page **/
+
+.add-task{
+    margin: 4rem;
+}
+
+form input,textarea,select, button{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    border: 1 px solid gray;
+    outline: none;
+    padding: 0.3rem;
+}
+
+form button{
+    margin-top: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: rgb(10, 204, 10);
+    font-weight: bold;
+    border: none;
+    color: white;
+}
+
+form label {
+    display: block;
+    margin-top: 0.7rem;
+}
+
+h2{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/** Task List Page **/
+
+.task-list{
+    margin: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li{
+    list-style-type: none;
+    line-height: 2rem;
+}
+
+.view-details > a{
+    text-decoration: none;
+    color : rgb(10, 204, 10);
+}
+
+/** Details Page **/
+
+.details{
+    padding: 2rem;
+}
+
+.nav-back>a{
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color : rgb(10, 204, 10);
+}
+
+.footer-nav{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-nav > a{
+    text-decoration: none;
+    color: rgb(10, 204, 10);
+    font-weight: bold;
+    font-size: 1.1rem;
+}

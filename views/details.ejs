@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container" style="min-width: 65vw;">
+            <h2>Task Details</h2>
+            <div class="details">
+                <ul>
+                    <li><h3><%= task.title %></h3></li>
+                    <li><b>Description :</b> <%= task.description %></li>
+                    <li><b>Assignee :</b> <%= task.assignee %></li>
+                    <li><b>Due Date :</b> <%= task.date.toDateString() %></li>
+                    <li><b>Priority :</b> <%= task.priority %></li>
+                </ul>
+            </div>
+
+            <div class="nav-back">
+                <a href="http://localhost:8080/task/<%=task.id%>/edit">Update Task</a>
+                <a href="http://localhost:8080/task/list">Back To Task List</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
